@@ -12,9 +12,11 @@ btnDiv.appendChild(btn);//this adds btn to btnDiv
 
 var btnClick = 0;
 
-var squareContainer = document.createElement('div')
+var squareContainer = document.createElement('div');
 
-document.body.appendChild(squareContainer);
+document.body.appendChild(squareContainer);//this adds squareContainer to body
+
+squareContainer.className = 'square-container'
 
 btn.addEventListener('click', function() {
     var squareDiv = document.createElement('div');
@@ -25,7 +27,7 @@ btn.addEventListener('click', function() {
     squareContainer.appendChild(squareDiv);//this adds squareDiv to squareContainer
     // squareDiv.appendChild(testText)
 
-    squareDiv.className = 'square'
+    squareDiv.className = 'square';
 
     squareDiv.id = ('s' + btnClick);//this adds ids based on btnClick
 
