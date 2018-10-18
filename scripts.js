@@ -1,3 +1,5 @@
-var btn = document.createElement('button')
+var btn = document.createElement('button');
+var btnText = document.createTextNode('Add Square');
 
-document.body.appendChild(btn)
+btn.appendChild(btnText);
+document.body.appendChild(btn);
