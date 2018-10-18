@@ -1,8 +1,12 @@
+var btnDiv = document.createElement('div')
+
+document.body.appendChild(btnDiv)
+
 var btn = document.createElement('button');
 var btnText = document.createTextNode('Add Square');
 
 btn.appendChild(btnText);
-document.body.appendChild(btn);
+btnDiv.appendChild(btn);
 
 var squareContainer = document.createElement('div')
 
@@ -14,4 +18,7 @@ btn.addEventListener('click', function() {
 
     squareContainer.appendChild(squareDiv);
     squareDiv.appendChild(testText)
+
+    squareDiv.className = 'square'
+    
 });
