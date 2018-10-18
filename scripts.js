@@ -17,7 +17,7 @@ btn.addEventListener('click', function() {
     var testText = document.createTextNode('test')
 
     squareContainer.appendChild(squareDiv);
-    squareDiv.appendChild(testText)
+    // squareDiv.appendChild(testText)
 
     squareDiv.className = 'square'
     
