@@ -19,7 +19,6 @@ btn.addEventListener('click', function() {
     var testText = document.createTextNode('test')
 
     btnClick++;
-    console.log(btnClick)
 
     squareContainer.appendChild(squareDiv);
     // squareDiv.appendChild(testText)
@@ -27,5 +26,9 @@ btn.addEventListener('click', function() {
     squareDiv.className = 'square'
 
     squareDiv.id = ('s' + btnClick)
+
+    var divText = document.createTextNode('s' + btnClick)
+
+    squareDiv.appendChild(divText)
 
 });
