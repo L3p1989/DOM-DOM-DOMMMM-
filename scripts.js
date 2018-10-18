@@ -5,5 +5,7 @@ btn.appendChild(btnText);
 document.body.appendChild(btn);
 
 btn.addEventListener('click', function() {
-    console.log('Stop poking me!');
+    var squareDiv = document.createElement('div');
+
+    document.body.appendChild(squareDiv)
 });
