@@ -2,6 +2,8 @@ var btnDiv = document.createElement('div');
 
 document.body.appendChild(btnDiv);//this adds a div to house the button
 
+btnDiv.className = 'btn-div'
+
 var btn = document.createElement('button');
 var btnText = document.createTextNode('Add Square');
 
