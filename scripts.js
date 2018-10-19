@@ -62,11 +62,11 @@ btn.addEventListener('click', function () {
     });
 
     squareDiv.addEventListener('dblclick', function(e) {
-        if (e.target.id % 2 == 0) {
+        if (e.target.id % 2 == 0 && e.target !== squareContainer.lastChild) {
             squareContainer.removeChild(e.target.nextSibling)
-        } else if (e.target.id % 2 == 1) {
+        } else if (e.target.id % 2 == 1 && e.target !== squareContainer.firstChild) {
             squareContainer.removeChild(e.target.previousSibling)
-        }
-    });
+        } else return alert("No square to remove!")
+    }); 
 
 });
