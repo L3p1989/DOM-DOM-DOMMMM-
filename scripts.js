@@ -41,32 +41,32 @@ btn.addEventListener('click', function () {
 
     // squareDiv.appendChild(divText);//this adds divText to squareDivs
 
-    squareContainer.addEventListener('mouseover', showDiv, false);
+    squareContainer.addEventListener('mouseover', showDiv, false);//adds mouseover event for `.square`s
 
     function showDiv(e) {
         if (e.target !== e.currentTarget) {
             e.target.textContent = e.target.id
         }
-    };
+    };//adds function to event to add text content num of whatever id div is
 
-    squareContainer.addEventListener('mouseout', hideDiv, false);
+    squareContainer.addEventListener('mouseout', hideDiv, false);//adds mouseout event for `.square`s
 
     function hideDiv(e) {
         if (e.target !== e.currentTarget) {
             e.target.textContent = ''
         }
-    };
+    };//adds function to event to remove text
 
     squareDiv.addEventListener('click', function(e) {
         e.target.style.backgroundColor = randomColor()
-    });
+    });//adds 'click' event listener to squareDiv that changes the background-color to one of the colors in the randomColor function
 
     squareDiv.addEventListener('dblclick', function(e) {
         if (e.target.id % 2 == 0 && e.target !== squareContainer.lastChild) {
-            squareContainer.removeChild(e.target.nextSibling)
+            squareContainer.removeChild(e.target.nextSibling);
         } else if (e.target.id % 2 == 1 && e.target !== squareContainer.firstChild) {
-            squareContainer.removeChild(e.target.previousSibling)
-        } else return alert("No square to remove!")
-    }); 
+            squareContainer.removeChild(e.target.previousSibling);
+        } else return alert("No square to remove!");
+    }); //adds 'dblclick' event listener to `.square`s
 
 });
