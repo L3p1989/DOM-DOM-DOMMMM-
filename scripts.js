@@ -63,9 +63,9 @@ btn.addEventListener('click', function () {
 
     squareDiv.addEventListener('dblclick', function(e) {
         if (e.target.id % 2 == 0) {
-            console.log("I'm even")
+            squareContainer.removeChild(e.target.nextSibling)
         } else if (e.target.id % 2 == 1) {
-            console.log("I'm odd")
+            squareContainer.removeChild(e.target.previousSibling)
         }
     });
 
