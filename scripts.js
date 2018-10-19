@@ -18,7 +18,7 @@ document.body.appendChild(squareContainer);//this adds squareContainer to body
 
 squareContainer.className = 'square-container'
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     var squareDiv = document.createElement('div');
     // var testText = document.createTextNode('test');
 
@@ -41,7 +41,7 @@ btn.addEventListener('click', function() {
         if (e.target !== e.currentTarget) {
             e.target.textContent = e.target.id
         }
-    }
+    };
 
     squareContainer.addEventListener('mouseout', hideDiv, false);
 
@@ -49,6 +49,14 @@ btn.addEventListener('click', function() {
         if (e.target !== e.currentTarget) {
             e.target.textContent = ''
         }
+    };
+
+    squareContainer.addEventListener('click', squareClick, false);
+
+    function squareClick(e) {
+        if (e.target !== e.currentTarget) {
+            e.target.style.backroundColor = randomColor()
+        };
     }
 
 });
