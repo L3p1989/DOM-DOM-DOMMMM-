@@ -18,6 +18,12 @@ document.body.appendChild(squareContainer);//this adds squareContainer to body
 
 squareContainer.className = 'square-container'
 
+function randomColor() {
+    var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua'];
+    var randomizer = Math.floor((Math.random() * colorArray.length));
+    return colorArray[randomizer];
+};  //this function will allow you to change the color of anything randomly between all listed colors
+
 btn.addEventListener('click', function () {
     var squareDiv = document.createElement('div');
     // var testText = document.createTextNode('test');
@@ -51,12 +57,8 @@ btn.addEventListener('click', function () {
         }
     };
 
-    squareContainer.addEventListener('click', squareClick, false);
-
-    function squareClick(e) {
-        if (e.target !== e.currentTarget) {
-            e.target.style.backroundColor = randomColor()
-        };
-    }
+    squareDiv.addEventListener('click', function(e) {
+        e.target.style.backgroundcolor = randomColor()
+    });
 
 });
