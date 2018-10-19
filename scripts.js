@@ -58,7 +58,11 @@ btn.addEventListener('click', function () {
     };
 
     squareDiv.addEventListener('click', function(e) {
-        e.target.style.backgroundcolor = randomColor()
+        e.target.style.backgroundColor = randomColor()
+    });
+
+    squareDiv.addEventListener('dblclick', function(e) {
+
     });
 
 });
