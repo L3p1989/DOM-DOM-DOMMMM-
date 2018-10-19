@@ -35,4 +35,12 @@ btn.addEventListener('click', function() {
 
     squareDiv.appendChild(divText);//this adds divText to squareDivs
 
+    squareContainer.addEventListener('mouseover', showDiv, false);
+
+    function showDiv(e) {
+        if (e.target !== e.currentTarget) {
+            e.target.style.color = 'white'
+        }
+    }
+
 });
