@@ -19,7 +19,7 @@ document.body.appendChild(squareContainer);//this adds squareContainer to body
 squareContainer.className = 'square-container'
 
 function randomColor() {
-    var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua'];
+    var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'aqua'];
     var randomizer = Math.floor((Math.random() * colorArray.length));
     return colorArray[randomizer];
 };  //this function will allow you to change the color of anything randomly between all listed colors
