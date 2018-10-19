@@ -62,7 +62,7 @@ btn.addEventListener('click', function () {
     });
 
     squareDiv.addEventListener('dblclick', function(e) {
-
+        if (e.target.id(btnClick) %= 0 ) 
     });
 
 });
