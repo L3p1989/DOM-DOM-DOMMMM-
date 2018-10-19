@@ -1,5 +1,6 @@
 .square {
     background-color: black;
+    color: white;
     display: inline-block;
     height: 100px;
     width: 100px;
