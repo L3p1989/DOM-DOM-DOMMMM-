@@ -35,7 +35,7 @@ btn.addEventListener('click', function () {
 
     squareDiv.className = 'square';
 
-    squareDiv.id = ('s' + btnClick);//this adds ids based on btnClick
+    squareDiv.id = (btnClick);//this adds ids based on btnClick
 
     var divText = document.createTextNode('s' + btnClick);
 
@@ -62,7 +62,11 @@ btn.addEventListener('click', function () {
     });
 
     squareDiv.addEventListener('dblclick', function(e) {
-        if (e.target.id(btnClick) %= 0 ) 
+        if (e.target.id % 2 == 0) {
+            console.log("I'm even")
+        } else if (e.target.id % 2 == 1) {
+            console.log("I'm odd")
+        }
     });
 
 });
